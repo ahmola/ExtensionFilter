@@ -1,0 +1,71 @@
+.container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.fixed-extensions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fixed-extensions label {
+  margin-right: 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 6px;
+  width: 200px;
+}
+
+.input-group button {
+  padding: 6px 10px;
+}
+
+.extension-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  min-height: 100px;
+}
+
+.extension-count {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.custom-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background: #f9f9f9;
+}
+
+.tag span {
+  margin-right: 4px;
+}

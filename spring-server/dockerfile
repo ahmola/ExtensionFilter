@@ -1,0 +1,7 @@
+FROM openjdk:17
+
+COPY build/libs/spring-server-0.0.1-SNAPSHOT.jar spring-server.jar
+
+ENTRYPOINT ["java", "-jar", "spring-server.jar"]
+
+EXPOSE 8080

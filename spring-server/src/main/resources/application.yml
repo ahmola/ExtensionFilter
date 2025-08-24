@@ -1,0 +1,62 @@
+server:
+  port: 8888
+
+app:
+  cors:
+    allowed-origins: "http://localhost:5173"
+
+# swagger
+springdoc:
+  api-docs:
+    path: /api/v1/forbidden/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
+
+spring:
+  application:
+    name: spring-server
+  # redis
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60s
+  redis:
+    host: localhost
+    port: 6379
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  # mysql
+  datasource:
+    url: jdbc:mysql://flow.c7yq02g6gdsd.ap-northeast-2.rds.amazonaws.com:3306/extensions?serverTimezone=Asia/Seoul
+    username: "admin"
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show:
+          sql: false
+        format_sql: false
+
+#cache
+cache:
+  ttl:
+    default-seconds: 60
+
+# metrics(prometheus)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      tags:
+        application: extensionfilter
