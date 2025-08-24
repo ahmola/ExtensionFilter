@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME. = "spring-server"
+        DEPLOY_DIR = "/home/ubuntu/workspace"
+    }
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ahmola/ExtensionFilter.git'
+            }
+        }
+
+        stage('Build with Gradle') {
+            steps {
+                sh './gradlew clean build -x test'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh "docker build -t ${IMAGE_NAME} -f dockerfile ."
+            }
+        }
+
+        stage('Deploy to EC2 via Docker Compose') {
+            steps {
+                sh """
+                cd ${DEPLOY_DIR}
+                docker compose down
+                docker compose -f docker-compose.yml up -d
+                """
+            }
+        }
+    }
+}
