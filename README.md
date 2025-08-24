@@ -5,7 +5,7 @@ Extension Filter Project for flow.team by 박영서
 
 ## 아키텍처 설계
 
-[!img](이미지 주소)
+![img](https://github.com/ahmola/ExtensionFilter/blob/main/%ED%94%8C%EB%A1%9C%EC%9A%B0%EA%B3%BC%EC%A0%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.png)
 
 ### 클라이언트(Vite, http://43.200.6.17:5173)
 본 과제를 진행하기 위해서, 파일 확장자를 차단하기 위한 아키텍처를 구상해보았습니다.
@@ -23,7 +23,7 @@ Extension Filter Project for flow.team by 박영서
 EC2 인스턴스에서 Nginx에 의해 띄어집니다.
 
 ### 서버(Spring, http://43.200.6.17:8888)
-[!img](스웨거 이미지)
+![img](https://github.com/ahmola/ExtensionFilter/blob/main/%EC%8A%A4%EC%9B%A8%EA%B1%B0.png)
 서버는 Springboot를 사용하여 구현하였습니다.
 
 Spring에서는 차단 확장자의 Create, Read, Delete에 필요한 Restful API를 제공합니다.
@@ -58,4 +58,4 @@ CrossOrigin을 사용하여 오직 클라이언트(또는 부하 테스트를 �
 대신에, Grafana K6라는 부하 테스트 도구를 사용하여 실제로 어느 정도의 성능 향상을 기대할 수 있는지 확인할 수 있었습니다.
 
 또한, 이를 ChatGPT한테 분석을 요청하였고 실제로도 10배정도의 성능 향상이 나타났습니다.
-[!img](k6)
+![img](https://github.com/ahmola/ExtensionFilter/blob/main/k6.png)
