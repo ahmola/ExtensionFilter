@@ -4,8 +4,8 @@ import { randomItem, randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.4.0
 
 // 설정
 export const options = {
-  vus: 1, // 다중 사용자 시나리오
-  iterations: 1, // 1회만 실행
+  vus: 10, // 다중 사용자 시나리오
+  iterations: 10, // 10회 실행
 };
 
 const BASE_URL = 'http://localhost:8080/api/v1/forbidden/crud';
@@ -64,5 +64,7 @@ export default function () {
       });
 
       sleep(0.01);
+
+      // k6 run --out csv=results.csv api_test.js로 결과를 csv파일로 저장
     }
 }

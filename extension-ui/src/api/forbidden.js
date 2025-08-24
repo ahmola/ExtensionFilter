@@ -1,4 +1,4 @@
-const BASE = '/api/v1/forbidden/crud'
+const BASE = "http://43.200.6.17:8888/api/v1/forbidden/crud";
 
 // GET
 export async function fetchForbiddenList() {

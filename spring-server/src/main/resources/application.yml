@@ -1,10 +1,6 @@
 server:
   port: 8888
 
-app:
-  cors:
-    allowed-origins: "https://ahmola.github.io/ExtensionFilter/"
-
 # swagger
 springdoc:
   api-docs:
@@ -42,21 +38,7 @@ spring:
         show:
           sql: false
         format_sql: false
-
 #cache
 cache:
   ttl:
     default-seconds: 60
-
-# metrics(prometheus)
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,prometheus
-  endpoint:
-    prometheus:
-      enabled: true
-    metrics:
-      tags:
-        application: extensionfilter

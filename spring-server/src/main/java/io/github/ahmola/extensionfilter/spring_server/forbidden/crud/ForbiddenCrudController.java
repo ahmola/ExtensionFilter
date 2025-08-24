@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RequiredArgsConstructor
-@CrossOrigin(origins = "${app.cors.allowed-origins}", // 클라이언트만 API 사용가능
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE})
 @RequestMapping("/api/v1/forbidden/crud")
 @Tag(name = "Forbidden Extension", description = "차단 확장자 관리 API")
 @RestController
