@@ -6,7 +6,6 @@ Extension Filter Project for flow.team by 박영서
 ## 아키텍처 설계
 
 ![img](https://github.com/ahmola/ExtensionFilter/blob/main/%ED%94%8C%EB%A1%9C%EC%9A%B0%EA%B3%BC%EC%A0%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.png)
-
 ### 클라이언트(Vite, http://43.200.6.17:5173)
 본 과제를 진행하기 위해서, 파일 확장자를 차단하기 위한 아키텍처를 구상해보았습니다.
 
